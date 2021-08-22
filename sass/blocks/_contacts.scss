@@ -1,0 +1,41 @@
+.contacts {
+  padding-top: 120px;
+  &__wrapper {
+    margin-top: 60px;
+    padding: 0 60px;
+    display: grid;
+    grid-template: repeat(1, minmax(45px, auto)) / repeat(2, 370px);
+    grid-auto-rows: minmax(165px / auto);
+    justify-content: space-between;
+    row-gap: 15px;
+    &-counter {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: bold;
+    }
+    &-title {
+      position: relative;
+      @include before_circle;
+      &:before {
+        width: 15px;
+        height: 15px;
+        top: 2px;
+      }
+      padding-left: 25px;
+    }
+  }
+  &__item {
+    display: grid;
+    grid-template: minmax(21px, auto) 18px / 200px 100px;
+    justify-content: space-between;
+    align-content: space-between;
+
+    p {
+      width: 370px;
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 0;
+      padding-left: 25px;
+    }
+  }
+}
